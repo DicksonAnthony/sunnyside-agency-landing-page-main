@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+}
+img {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+#hero {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("images/desktop/image-header.jpg");
+}
+.header {
+  padding-top: 30px;
+}
+.nav {
+  display: flex;
+  color: hsl(0, 0%, 100%);
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 auto;
+}
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  width: 30%;
+}
+.nav-links a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+.nav-links li {
+  padding-top: 7px;
+}
+button {
+  border: none;
+  outline: none;
+  width: 30%;
+  font-weight: 700;
+  box-sizing: border-box;
+  background: hsl(0, 0%, 100%);
+  border-radius: 30px;
+  padding: 13px;
+  color: black;
+}
+.heading-1 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 900;
+  font-size: 50px;
+  margin-top: 100px;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+h1 {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 600;
+}
+.arrow {
+  position: absolute;
+  margin-top: 100px;
+  left: 46%;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#second-1 {
+  flex-basis: 50%;
+  border: 1px solid magenta;
+  padding: 120px;
+}
+.second-2 {
+  flex-basis: 50%;
+}
