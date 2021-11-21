@@ -8,14 +8,23 @@ body {
   font-size: 18px;
   font-family: "Barlow", sans-serif;
 }
+.desktop {
+  max-width: 1440px;
+  overflow: hidden;
+  margin: 0 auto;
+}
 img {
   box-sizing: border-box;
   max-width: 100%;
+  min-height: 100%;
+}
+.arrow {
+  min-height: 0;
 }
 #hero {
   height: 100vh;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center;
   background-image: url("images/desktop/image-header.jpg");
 }
 .header {
@@ -32,7 +41,7 @@ img {
   display: flex;
   list-style-type: none;
   justify-content: space-around;
-  width: 30%;
+  width: 40%;
 }
 .nav-links a {
   text-decoration: none;
@@ -63,23 +72,92 @@ button {
 }
 h1 {
   font-family: "Fraunces", sans-serif;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 700;
 }
 .arrow {
   position: absolute;
   margin-top: 100px;
   left: 46%;
 }
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+#learn-more {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Fraunces", snans-serif;
+  color: black;
+  border-radius: 3px;
+  display: inline-block;
 }
-#second-1 {
+.one {
+  border-bottom: 5px solid hsla(51, 100%, 49%, 0.373);
+}
+.two {
+  border-bottom: 5px solid hsla(7, 99%, 70%, 0.384);
+}
+.container {
+  margin: 0 auto;
+  display: flex;
+}
+.content-cont {
+  box-sizing: border-box;
   flex-basis: 50%;
-  border: 1px solid magenta;
+  margin-top: 12px;
   padding: 120px;
 }
-.second-2 {
+.img-cont {
   flex-basis: 50%;
+}
+.content {
+  color: hsl(210, 4%, 67%);
+}
+.row {
+  flex-basis: 50%;
+  line-height: 30px;
+  padding: 320px 150px 60px;
+  background-size: cover;
+}
+.designer {
+  background-image: url("images/desktop/image-graphic-design.jpg");
+}
+.photo {
+  background-image: url("images/desktop/image-photography.jpg");
+}
+.G {
+  color: hsl(167, 40%, 24%);
+}
+.P {
+  color: hsl(198, 62%, 26%);
+}
+.testimonials {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+.test {
+  border-radius: 100%;
+  max-width: 4rem;
+  min-height: 4rem;
+}
+.heading-test {
+  color: hsl(210, 4%, 67%);
+  font-size: 1.875rem;
+  margin-bottom: 80px;
+  text-align: center;
+}
+.monial {
+  color: hsl(213, 9%, 39%);
+  font-size: 1rem;
+  line-height: 30px;
+  margin: 50px 0;
+  padding: 0 18px 0 18px;
+}
+.padding {
+  padding: 165px;
+}
+.gallery {
+  display: flex;
+}
+.gallery img {
+  max-width: 25%;
+  box-sizing: border-box;
 }
