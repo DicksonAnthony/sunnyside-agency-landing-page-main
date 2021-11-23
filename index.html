@@ -11,6 +11,12 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/34fb35e81d.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="nav.js" async></script>
     <title>Frontend Mentor | Sunnyside agency landing page</title>
   </head>
 
@@ -19,21 +25,36 @@
       <section id="hero">
         <div class="header">
           <div class="nav">
-            <img src="images/logo.svg" id="heading-1" />
+            <div>
+              <img src="images/logo.svg" id="heading-1" />
+            </div>
             <ul class="nav-links">
               <li><a href="#">About</a></li>
               <li><a href="#">Services</a></li>
               <li><a href="#">Projects</a></li>
               <button>Contact</button>
             </ul>
+            <label class="toggle">
+              <i class="fas fa-bars"></i>
+            </label>
+          </div>
+          <div class="mobile-nav" data-visible="false">
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Projects</a></li>
+              <button class="mobile-contact">Contact</button>
+            </ul>
           </div>
         </div>
-        <h1 class="heading-1">We are creatives</h1>
-        <img
-          src="images/icon-arrow-down.svg"
-          alt="icon-arrow-down"
-          class="arrow"
-        />
+        <div class="hey" data-hey="true">
+          <h1 class="heading-1">We are creatives</h1>
+          <img
+            src="images/icon-arrow-down.svg"
+            alt="icon-arrow-down"
+            class="arrow"
+          />
+        </div>
       </section>
 
       <section id="second">
@@ -79,7 +100,7 @@
           <div class="designer row">
             <h1>Graphic design</h1>
             <br />
-            <p class="G">
+            <p>
               Great design makes you memorable. We deliver artwork that
               underscores your brand message and captures potential clients’
               attention.
@@ -88,7 +109,7 @@
           <div class="photo row">
             <h1>Photography</h1>
             <br />
-            <p class="P">
+            <p>
               Increase your credibility by getting the most stunning,
               high-quality photos that improve your business image.
             </p>
@@ -100,34 +121,31 @@
         <div class="padding">
           <h1 class="heading-test">Client testimonials</h1>
           <div class="testimonials">
-            <div>
+            <div class="people">
               <img src="images/image-emily.jpg" alt="emily" class="test" />
               <p class="monial">
                 We put our trust in Sunnyside and they delivered, making sure
                 our needs were met and deadlines were always hit.
               </p>
-              <p>Emily R.</p>
-              <br />
+              <p class="name">Emily R.</p>
               <p id="team">Marketing Director</p>
             </div>
-            <div>
+            <div class="people">
               <img src="images/image-thomas.jpg" alt="emily" class="test" />
               <p class="monial">
                 Sunnyside’s enthusiasm coupled with their keen interest in our
                 brand’s success made it a satisfying and enjoyable experience.
               </p>
-              <p>Thomas S.</p>
-              <br />
+              <p class="name">Thomas S.</p>
               <p id="team">Chief Operating Officer</p>
             </div>
-            <div>
+            <div class="people">
               <img src="images/image-jennie.jpg" alt="emily" class="test" />
               <p class="monial">
                 Incredible end result! Our sales increased over 400% when we
                 worked with Sunnyside. Highly recommended!
               </p>
-              <p>Jennie F.</p>
-              <br />
+              <p class="name">Jennie F.</p>
               <p id="team">Business Owner</p>
             </div>
           </div>
@@ -136,33 +154,60 @@
 
       <section id="sixth">
         <div class="gallery">
-          <img
-            src="images/desktop/image-gallery-milkbottles.jpg"
-            alt="bottle"
-          />
-          <img
-            src="images/desktop/image-gallery-orange.jpg"
-            alt="orange on a plate"
-          />
-          <img src="images/desktop/image-gallery-cone.jpg" alt="cone" />
-          <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="sugar" />
+          <div>
+            <img
+              src="images/desktop/image-gallery-milkbottles.jpg"
+              alt="bottle"
+            />
+          </div>
+          <div>
+            <img
+              src="images/desktop/image-gallery-orange.jpg"
+              alt="orange on a plate"
+            />
+          </div>
+          <div>
+            <img src="images/desktop/image-gallery-cone.jpg" alt="cone" />
+          </div>
+          <div>
+            <img
+              src="images/desktop/image-gallery-sugarcubes.jpg"
+              alt="sugar"
+            />
+          </div>
         </div>
       </section>
 
       <section id="seventh">
         <div class="body">
-          <h1 class="footer">Sunnyside</h1>
+          <h1 class="footer">sunnyside</h1>
           <ul>
             <li>About</li>
             <li>Services</li>
             <li>Projects</li>
           </ul>
-          <div id="social-links">
-            <img src="images/icon-facebook.svg" alt="facebook" />
-            <img src="images/icon-instagram.svg" alt="insta" />
-            <img src="images/icon-twitter.svg" alt="twitter" />
-            <img src="images/icon-pinterest.svg" alt="pinterest" />
-          </div>
+          <ul id="social-links">
+            <li>
+              <a href="#"
+                ><img src="images/icon-facebook.svg" alt="facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/icon-instagram.svg" alt="insta"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/icon-twitter.svg" alt="twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/icon-pinterest.svg" alt="pinterest"
+              /></a>
+            </li>
+          </ul>
         </div>
       </section>
     </div>

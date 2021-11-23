@@ -16,10 +16,7 @@ body {
 img {
   box-sizing: border-box;
   max-width: 100%;
-  min-height: 100%;
-}
-.arrow {
-  min-height: 0;
+  height: 100%;
 }
 #hero {
   height: 100vh;
@@ -29,6 +26,9 @@ img {
 }
 .header {
   padding-top: 30px;
+}
+.mobile-nav{
+  display: none;
 }
 .nav {
   display: flex;
@@ -55,6 +55,7 @@ button {
   outline: none;
   width: 30%;
   font-weight: 700;
+  font-family: "Fraunce", sans-serif;
   box-sizing: border-box;
   background: hsl(0, 0%, 100%);
   border-radius: 30px;
@@ -62,13 +63,20 @@ button {
   color: black;
 }
 #heading-1 {
-  max-width: 120px;
+  max-height: 1.5rem;
+  max-width: 170px;
+}
+.arrow {
+  max-height: 7rem;
+  position: absolute;
+  top: 360px;
+  left: 48%;
 }
 .heading-1 {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: 900;
-  font-size: 50px;
+  font-size: 59px;
   margin-top: 100px;
   color: hsl(0, 0%, 100%);
   text-align: center;
@@ -77,11 +85,6 @@ h1 {
   font-family: "Fraunces", sans-serif;
   font-size: 40px;
   font-weight: 700;
-}
-.arrow {
-  position: absolute;
-  margin-top: 100px;
-  left: 46%;
 }
 #learn-more {
   text-decoration: none;
@@ -104,16 +107,17 @@ h1 {
 .content-cont {
   box-sizing: border-box;
   flex-basis: 50%;
-  margin-top: 12px;
-  padding: 120px;
+  padding: 150px 120px 100px 120px;
 }
 .img-cont {
   flex-basis: 50%;
+  max-width: 100%;
 }
 .content {
   color: hsl(210, 4%, 67%);
 }
 .row {
+  max-width: 100%;
   flex-basis: 50%;
   line-height: 30px;
   padding: 320px 150px 60px;
@@ -121,14 +125,12 @@ h1 {
 }
 .designer {
   background-image: url("images/desktop/image-graphic-design.jpg");
+  background-position: center;
+  color: hsl(167, 40%, 24%);
 }
 .photo {
   background-image: url("images/desktop/image-photography.jpg");
-}
-.G {
-  color: hsl(167, 40%, 24%);
-}
-.P {
+  background-position: center;
   color: hsl(198, 62%, 26%);
 }
 .testimonials {
@@ -138,8 +140,8 @@ h1 {
 }
 .test {
   border-radius: 100%;
-  max-width: 4rem;
-  min-height: 4rem;
+  max-width: 5rem;
+  max-height: 5rem;
 }
 .heading-test {
   color: hsl(210, 4%, 67%);
@@ -149,10 +151,19 @@ h1 {
 }
 .monial {
   color: hsl(213, 9%, 39%);
-  font-size: 1rem;
+  font-size: 20px;
   line-height: 30px;
   margin: 50px 0;
   padding: 0 18px 0 18px;
+}
+.name {
+  font-family: "Fraunce", sans-serif;
+  font-weight: 700;
+}
+#team {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: hsl(210, 4%, 67%);
 }
 .padding {
   padding: 165px;
@@ -161,26 +172,28 @@ h1 {
   display: flex;
 }
 .gallery img {
-  max-width: 25%;
-  box-sizing: border-box;
+  max-width: 100%;
 }
 .body {
   background-color: hsl(168, 46%, 64%);
-  padding: 80px;
+  padding: 70px;
   text-align: center;
 }
-.footer{
+.footer {
   font-family: "Barlow", sans-serif;
+  font-weight: 900;
   color: hsl(167, 40%, 24%);
 }
-.body ul{
-  margin: 80px;
+.body ul {
+  margin: 0 auto;
+  padding: 70px 0;
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
 }
 .body ul li {
   list-style: none;
   color: hsl(167, 36%, 37%);
-  display: inline-block;
-  width: 10%;
 }
 #social-links {
   display: flex;
@@ -188,6 +201,93 @@ h1 {
   width: 20%;
   justify-content: space-between;
 }
-@media screen {
-  
+#social-links img {
+  object-fit: contain;
+}
+.toggle{
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  img {
+    width: 100%;
+  }
+  .arrow {
+    width: 36px;
+    top: 270px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .heading-1 {
+    margin-top: 80px;
+    font-size: 40px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .img-cont {
+    order: -1;
+  }
+  .content-cont {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  .row {
+    padding: 320px 15px 30px 15px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .row h1 {
+    font-size: 2rem;
+  }
+  .testimonials {
+    flex-direction: column;
+  }
+  .monial {
+    margin: 20px 0;
+  }
+  .padding {
+    padding: 30px;
+  }
+  .people {
+    margin-bottom: 80px;
+  }
+  .gallery {
+    flex-wrap: wrap;
+  }
+  .gallery div {
+    width: 50%;
+  }
+  .body {
+    padding: 50px 0;
+  }
+  .body ul {
+    width: 70%;
+  }
+  #social-links {
+    width: 50%;
+  }
+  .mobile-nav[data-visible = "true"]{
+    z-index: 1000;
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+    transition: ease-out 0.5s;
+    background-color: hsl(0, 0%, 100%);
+  }
+  .mobile-nav ul {
+    list-style: none;
+  }
+  .mobile-contact{
+    background-color: hsl(51, 100%, 49%);
+    color: black;
+  }
+  .hey[data-hey="false"]{
+    display: none;
+  }
+  .toggle{
+    display: block;
+    font-size: 40px;
+    color: hsl(0, 0%, 100%);
+  }
 }
