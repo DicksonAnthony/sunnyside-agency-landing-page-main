@@ -27,7 +27,7 @@ img {
 .header {
   padding-top: 30px;
 }
-.mobile-nav{
+.mobile-nav {
   display: none;
 }
 .nav {
@@ -55,12 +55,15 @@ button {
   outline: none;
   width: 30%;
   font-weight: 700;
-  font-family: "Fraunce", sans-serif;
+  font-family: "Fraunces", sans-serif;
   box-sizing: border-box;
   background: hsl(0, 0%, 100%);
   border-radius: 30px;
   padding: 13px;
   color: black;
+}
+button:hover {
+  background-color: hsla(0, 0%, 100%, 0.466);
 }
 #heading-1 {
   max-height: 1.5rem;
@@ -86,10 +89,10 @@ h1 {
   font-size: 40px;
   font-weight: 700;
 }
-#learn-more {
+.learn-more {
   text-decoration: none;
   font-size: 16px;
-  font-family: "Fraunces", snans-serif;
+  font-family: "Fraunces", sans-serif;
   color: black;
   border-radius: 3px;
   display: inline-block;
@@ -97,8 +100,14 @@ h1 {
 .one {
   border-bottom: 5px solid hsla(51, 100%, 49%, 0.373);
 }
+.one:hover {
+  border-bottom: 5px solid hsl(51, 100%, 49%);
+}
 .two {
   border-bottom: 5px solid hsla(7, 99%, 70%, 0.384);
+}
+.two:hover {
+  border-bottom: 5px solid hsl(7, 99%, 70%);
 }
 .container {
   margin: 0 auto;
@@ -195,6 +204,9 @@ h1 {
   list-style: none;
   color: hsl(167, 36%, 37%);
 }
+.body ul li:hover {
+  color: hsl(0, 0%, 100%);
+}
 #social-links {
   display: flex;
   margin: 0 auto;
@@ -204,7 +216,7 @@ h1 {
 #social-links img {
   object-fit: contain;
 }
-.toggle{
+.toggle {
   display: none;
 }
 @media screen and (max-width: 800px) {
@@ -263,29 +275,43 @@ h1 {
   }
   .body ul {
     width: 70%;
+    padding: 40px 0;
   }
   #social-links {
     width: 50%;
   }
-  .mobile-nav[data-visible = "true"]{
+  .mobile-nav[data-visible="true"] {
+    top: 7rem;
+    width: 90%;
+    height: 50%;
+    padding: 30px;
     z-index: 1000;
-    width: 70%;
-    margin: 0 auto;
     display: block;
+    position: absolute;
+    text-align: center;
     transition: ease-out 0.5s;
+    transform: translateX(5.4%);
     background-color: hsl(0, 0%, 100%);
   }
   .mobile-nav ul {
     list-style: none;
   }
-  .mobile-contact{
-    background-color: hsl(51, 100%, 49%);
-    color: black;
+  .mobile-nav li {
+    line-height: 50px;
   }
-  .hey[data-hey="false"]{
+  .mobile-nav li a {
+    text-decoration: none;
+    color: hsl(232, 10%, 55%);
+  }
+  .mobile-contact {
+    width: 40%;
+    margin-top: 10px;
+    background-color: hsl(51, 100%, 49%);
+  }
+  .hey[data-hey="false"] {
     display: none;
   }
-  .toggle{
+  .toggle {
     display: block;
     font-size: 40px;
     color: hsl(0, 0%, 100%);
